@@ -1,0 +1,28 @@
+
+
+<h1>All Posts</h1>
+
+
+  <div class="container my-5">
+  <% @posts.each do |post| %>
+    <div class="card mb-4">
+      <div class="card-body">
+        <h3 class="card-title">
+          <%= post.title %>
+        </h3>
+        <h6 class="card-subtitle mb-2 text-muted">
+          <%= post.user.email %>
+        </h6>
+        <p class="card-text">
+          <%= post.content %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+
+<br>
+
+<%= link_to 'Create Post', new_post_path, class:"btn btn-primary" %>
